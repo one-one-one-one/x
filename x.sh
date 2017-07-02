@@ -437,7 +437,7 @@ echo "PPTP VPN : TCP 1723" | lolcat
 echo "nginx    : 81" | lolcat
 echo "" | lolcat
 echo "Tools :" | lolcat
-echo "-------" | tee -a log-install.txt
+echo "-------" | lolcat
 echo "axel, bmon, htop, iftop, mtr, rkhunter, nethogs: nethogs $ether" | lolcat
 echo "" | lolcat
 echo "Script :" | lolcat

@@ -217,27 +217,27 @@ service dropbear restart
 service ssh restart
 
 # upgrade dropbear 2014
-#apt-get install zlib1g-dev
-#wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2012.55.tar.bz2
-#bzip2 -cd dropbear-2012.55.tar.bz2 | tar xvf -
-#cd dropbear-2012.55
-#./configure
-#make && make install
-#mv /usr/sbin/dropbear /usr/sbin/dropbear1
-#ln /usr/local/sbin/dropbear /usr/sbin/dropbear
-#service dropbear restart
-
-# upgade dropbear
 apt-get install zlib1g-dev
-wget $source/debian7/dropbear-2017.75.tar.bz2
-bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
+wget https://matt.ucc.asn.au/dropbear/releases/dropbear-2017.75.tar.bz2
+bzip2 -cd dropbear-2017.75.tar.bz2 | tar xvf -
 cd dropbear-2017.75
 ./configure
 make && make install
-mv /usr/sbin/dropbear /usr/sbin/dropbear.old
+mv /usr/sbin/dropbear /usr/sbin/dropbear1
 ln /usr/local/sbin/dropbear /usr/sbin/dropbear
 service dropbear restart
-cd && rm -rf dropbear-2017.75 && rm -rf dropbear-2017.75.tar.bz2
+
+# upgade dropbear
+#apt-get install zlib1g-dev
+#wget $source/debian7/dropbear-2017.75.tar.bz2
+#bzip2 -cd dropbear-2016.74.tar.bz2 | tar xvf -
+#cd dropbear-2017.75
+#./configure
+#make && make install
+#mv /usr/sbin/dropbear /usr/sbin/dropbear.old
+#ln /usr/local/sbin/dropbear /usr/sbin/dropbear
+#service dropbear restart
+#cd && rm -rf dropbear-2017.75 && rm -rf dropbear-2017.75.tar.bz2
 
 
 # install vnstat gui
@@ -296,8 +296,8 @@ service squid3 restart
 
 # install webmin
 cd
-#wget http://prdownloads.sourceforge.net/webadmin/webmin_1.850_all.deb
-wget $source/debian7/webmin_1.850_all.deb
+wget http://prdownloads.sourceforge.net/webadmin/webmin_1.850_all.deb
+#wget $source/debian7/webmin_1.850_all.deb
 dpkg -i webmin_1.850_all.deb
 apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python
 apt-get -f install

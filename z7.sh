@@ -422,56 +422,56 @@ echo "unset HISTFILE" >> /etc/profile
 
 # info
 clear
-echo "Autoscript Edited BY YUSUF-ARDIANSYAH atau (082139743432):" | tee log-install.txt
-echo "=======================================================" | tee -a log-install.txt
-echo "Service :" | tee -a log-install.txt
-echo "---------" | tee -a log-install.txt
-echo "OpenSSH  : 22, 143" | tee -a log-install.txt
-echo "Dropbear : 443, 80" | tee -a log-install.txt
-echo "Squid3   : 8080 limit to IP $MYIP" | tee -a log-install.txt
-#echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)" | tee -a log-install.txt
-echo "badvpn   : badvpn-udpgw port 7300" | tee -a log-install.txt
-echo "PPTP VPN : TCP 1723" | tee -a log-install.txt
-echo "nginx    : 81" | tee -a log-install.txt
-echo "" | tee -a log-install.txt
-echo "Tools :" | tee -a log-install.txt
+echo "Autoscript Edited BY YUSUF-ARDIANSYAH atau (082139743432):" | lolcat
+echo "=======================================================" | lolcat
+echo "Service :" | lolcat
+echo "---------" | lolcat
+echo "OpenSSH  : 22, 143" | lolcat
+echo "Dropbear : 443, 80" | lolcat
+echo "Squid3   : 8080 limit to IP $MYIP" | lolcat
+#echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)" | lolcat
+echo "badvpn   : badvpn-udpgw port 7300" | lolcat
+echo "PPTP VPN : TCP 1723" | lolcat
+echo "nginx    : 81" | lolcat
+echo "" | lolcat
+echo "Tools :" | lolcat
 echo "-------" | tee -a log-install.txt
-echo "axel, bmon, htop, iftop, mtr, rkhunter, nethogs: nethogs $ether" | tee -a log-install.txt
-echo "" | tee -a log-install.txt
-echo "Script :" | tee -a log-install.txt
-echo "--------" | tee -a log-install.txt
-echo "MENU"
-echo "" | tee -a log-install.txt
-echo "Fitur lain :" | tee -a log-install.txt
-echo "------------" | tee -a log-install.txt
-echo "Webmin         : http://$MYIP:10000/" | tee -a log-install.txt
-echo "vnstat         : http://$MYIP:81/vnstat/ [Cek Bandwith]" | tee -a log-install.txt
-echo "MRTG           : http://$MYIP:81/mrtg/" | tee -a log-install.txt
-echo "Timezone       : Asia/Jakarta " | tee -a log-install.txt
-echo "Fail2Ban       : [on]" | tee -a log-install.txt
-echo "DDoS Deflate.  : [on]" | tee -a log-install.txt
-echo "Block Torrent  : [on]" | tee -a log-install.txt
-echo "IPv6           : [off]" | tee -a log-install.txt
-echo "Auto Lock User Expire tiap jam 00:00" | tee -a log-install.txt
-echo "Auto Reboot tiap jam 00:00 dan jam 12:00" | tee -a log-install.txt
+echo "axel, bmon, htop, iftop, mtr, rkhunter, nethogs: nethogs $ether" | lolcat
+echo "" | lolcat
+echo "Script :" | lolcat
+echo "--------" | lolcat
+echo "MENU" | lolcat
+echo "" | lolcat
+echo "Fitur lain :" | lolcat
+echo "------------" | lolcat
+echo "Webmin         : http://$MYIP:10000/" | lolcat
+echo "vnstat         : http://$MYIP:81/vnstat/ [Cek Bandwith]" | lolcat
+echo "MRTG           : http://$MYIP:81/mrtg/" | lolcat
+echo "Timezone       : Asia/Jakarta " | lolcat
+echo "Fail2Ban       : [on]" | lolcat
+echo "DDoS Deflate.  : [on]" | lolcat
+echo "Block Torrent  : [on]" | lolcat
+echo "IPv6           : [off]" | lolcat
+echo "Auto Lock User Expire tiap jam 00:00" | lolcat
+echo "Auto Reboot tiap jam 00:00 dan jam 12:00" | lolcat
 echo "" | tee -a log-install.txt
 
 if [[ $vps = "zvur" ]]; then
-	echo "ALL SUPPORTED BY CLIENT VPS" | tee -a log-install.txt
+	echo "ALL SUPPORTED BY CLIENT VPS" | lolcat
 else
-	echo "ALL SUPPORTED BY TEAM HACKER" | tee -a log-install.txt
+	echo "ALL SUPPORTED BY TEAM HACKER" | lolcat
 	
 fi
-echo "Credit to all developers script, YUSUF-ARDIANSYAH" | tee -a log-install.txt
-echo "" | tee -a log-install.txt
-echo "Log Instalasi --> /root/log-install.txt" | tee -a log-install.txt
-echo "" | tee -a log-install.txt
-echo " !!! SILAHKAN REBOOT VPS ANDA !!!" | tee -a log-install.txt
-echo "=======================================================" | tee -a log-install.txt
+echo "Credit to all developers script, YUSUF-ARDIANSYAH" | lolcat
+echo "" | lolcat
+echo "Log Instalasi --> /root/log-install.txt" | lolcat
+echo "" | lolcat
+echo " !!! SILAHKAN REBOOT VPS ANDA !!!" | lolcat
+echo "=======================================================" | lolcat
 cd ~/
-rm -f /root/z7.sh
+rm -f /root/x7.sh
 rm -f /root/pptp.sh
 rm -f /root/ovpn.sh
-rm -f /root/dropbear-2012.55.tar.bz2
-rm -rf /root/dropbear-2012.55
+rm -f /root/dropbear-2017.75.tar.bz2
+rm -rf /root/dropbear-2017.75
 rm -f /root/IP

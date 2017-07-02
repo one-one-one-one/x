@@ -469,7 +469,7 @@ echo "" | lolcat
 echo " !!! SILAHKAN REBOOT VPS ANDA !!!" | lolcat
 echo "=======================================================" | lolcat
 cd ~/
-rm -f /root/x7.sh
+rm -f /root/x.sh
 rm -f /root/pptp.sh
 rm -f /root/ovpn.sh
 rm -f /root/dropbear-2017.75.tar.bz2

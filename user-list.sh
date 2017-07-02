@@ -15,7 +15,7 @@ fi
 #MYIP=$(wget -qO- ipv4.icanhazip.com)
 
 echo "-----------------------------------"
-echo "USERNAME              EXP DATE     "
+echo "USERNAME              EXP DATE     " | lolcat
 echo "-----------------------------------"
 
 while read expired
@@ -31,12 +31,12 @@ done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 
 echo "-----------------------------------"
-echo "Jumlah akun: $JUMLAH user"
+echo "Jumlah akun: $JUMLAH user" | lolcat
 echo "-----------------------------------"
 echo ""
 echo "----------------------------------------------------------------"
 
-	echo " DEVELOPED BY YUSUF-ARDIANSYAH atau (082139743432)"
-echo "----------------------------------------------------------------"
+	echo " DEVELOPED BY YUSUF-ARDIANSYAH atau (082139743432)" | lolcat
+echo "----------------------------------------------------------------" 
 echo ""
 

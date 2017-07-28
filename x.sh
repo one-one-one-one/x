@@ -202,7 +202,7 @@ service ssh restart
 
 apt-get install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=80/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=443/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 443"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
@@ -381,7 +381,7 @@ chmod +x /usr/bin/bannermenu
 chmod +x /usr/bin/menu-update-script-vps.sh
 cd
 # swap ram
-dd if=/dev/zero of=/swapfile bs=2048 count=2048k
+dd if=/dev/zero of=/swapfile bs=1024 count=1024k
 # buat swap
 mkswap /swapfile
 # jalan swapfile
@@ -430,8 +430,8 @@ echo "=======================================================" | lolcat
 echo "Service :" | lolcat
 echo "---------" | lolcat
 echo "OpenSSH  : 22, 143" | lolcat
-echo "Dropbear : 443, 80" | lolcat
-echo "Squid3   : 8080 limit to IP $MYIP" | lolcat
+echo "Dropbear : 443" | lolcat
+echo "Squid3   : 80 limit to IP $MYIP" | lolcat
 #echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)" | lolcat
 echo "badvpn   : badvpn-udpgw port 7300" | lolcat
 echo "PPTP VPN : TCP 1723" | lolcat
